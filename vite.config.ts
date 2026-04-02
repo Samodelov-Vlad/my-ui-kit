@@ -19,7 +19,8 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'MyUiKit',
-      fileName: 'index'
+      fileName: 'index',
+      formats: ['es'] // Указываем только современный формат ES Modules
     },
     rollupOptions: {
       // Указываем, какие библиотеки не нужно включать в сборку (они уже есть в проекте-потребителе)
