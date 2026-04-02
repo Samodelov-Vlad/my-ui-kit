@@ -26,7 +26,7 @@ export default defineConfig({
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
-          "react/jsx-runtime": "jsxRuntime", // На всякий случай для UMD, если добавишь
+          // "react/jsx-runtime": "jsxRuntime", // На всякий случай для UMD, если добавишь // раскоментить если сломалась сборка
         },
         exports: "named",
       },
