@@ -9,7 +9,7 @@ type SelectRef = React.ComponentRef<typeof Select>;
 export const AntdSelect = forwardRef<SelectRef, SelectProps>(
   ({ ...rest }, ref) => {
     return (
-      <AntdSelect
+      <Select
         // popupMatchSelectWidth={false} // ЭТОТ параметр позволяет списку выйти за границы контейнера
         ref={ref}
         showSearch
