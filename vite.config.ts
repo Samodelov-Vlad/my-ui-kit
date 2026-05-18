@@ -6,7 +6,9 @@ import { resolve } from "path";
 
 // vite.config.ts
 export default defineConfig({
-  plugins: [react(), dts({ insertTypesEntry: true })],
+  plugins: [
+    react(),
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
@@ -21,6 +23,7 @@ export default defineConfig({
         "react-dom",
         "react/jsx-runtime",
         "react/jsx-dev-runtime",
+        "antd", // <-- Не даем плагину "подавиться" типами Ant Design
       ],
       output: {
         globals: {

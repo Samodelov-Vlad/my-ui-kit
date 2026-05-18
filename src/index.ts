@@ -1,2 +1,2 @@
-export * from './components/AntdButton';
-export * from './components/AntdInput';
+export * from './components/AntdButton/index';
+export * from './components/AntdInput/index';
