@@ -3,7 +3,6 @@ import {
   themeQuartz,
   AllCommunityModule,
 } from "ag-grid-community";
-import { AllEnterpriseModule } from "ag-grid-enterprise";
 import { AgGridReact, type AgGridReactProps } from "ag-grid-react";
 import { AG_GRID_LOCALE_RU } from "./ag-grid-locale.ru";
 // Регистрируем модули один раз здесь

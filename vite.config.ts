@@ -29,7 +29,7 @@ export default defineConfig({
         // Говорим Vite, чтобы он не вшивал AG Grid внутрь вашей библиотеки, а использовал ту копию, которая будет установлена в основном проекте (ведь мы уже перенесли AG Grid в peerDependencies).
         "ag-grid-community",
         "ag-grid-react",
-        "ag-grid-enterprise",
+        // "ag-grid-enterprise",
       ],
       output: {
         globals: {
