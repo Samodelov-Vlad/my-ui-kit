@@ -1,7 +1,7 @@
 import { Button as e, DatePicker as t, Input as n, Select as r } from "antd";
 import { forwardRef as i } from "react";
 import { jsx as a } from "react/jsx-runtime";
-//#region src/components/button/index.tsx
+//#region src/components/ui/button/index.tsx
 var o = i(({ ...t }, n) => /* @__PURE__ */ a(e, {
 	ref: n,
 	...t
@@ -17,7 +17,8 @@ var o = i(({ ...t }, n) => /* @__PURE__ */ a(e, {
 })), l = i(({ ...e }, t) => /* @__PURE__ */ a(n.TextArea, {
 	ref: t,
 	...e
-})), u = ({ format: e, ...n }) => /* @__PURE__ */ a(t, {
+})), u = i(({ format: e, ...n }, r) => /* @__PURE__ */ a(t, {
+	ref: r,
 	allowClear: !0,
 	showNow: !0,
 	format: {
@@ -25,6 +26,6 @@ var o = i(({ ...t }, n) => /* @__PURE__ */ a(e, {
 		type: "mask"
 	},
 	...n
-});
+}));
 //#endregion
 export { o as Button, u as DatePicker, s as Input, c as Select, l as TextArea };
