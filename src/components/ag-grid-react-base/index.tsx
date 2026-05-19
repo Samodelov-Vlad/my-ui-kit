@@ -1,15 +1,23 @@
-import { ModuleRegistry, themeQuartz } from 'ag-grid-community';
+import {
+  ModuleRegistry,
+  themeQuartz,
+  AllCommunityModule,
+} from "ag-grid-community";
 // import { AllEnterpriseModule } from 'ag-grid-enterprise';
-import { AgGridReact, type AgGridReactProps } from 'ag-grid-react';
-import { AG_GRID_LOCALE_RU } from './ag-grid-locale.ru';
-
+import { AgGridReact, type AgGridReactProps } from "ag-grid-react";
+import { AG_GRID_LOCALE_RU } from "./ag-grid-locale.ru";
 // Регистрируем модули один раз здесь
 // ModuleRegistry.registerModules([AllEnterpriseModule]);
+
+ModuleRegistry.registerModules([AllCommunityModule]);
 
 // Типизируем пропсы: наследуем все стандартные пропсы AG Grid
 interface AgGridReactBaseProps<TData = any> extends AgGridReactProps<TData> {}
 
-export const AgGridReactBase = <TData,>({ theme, ...props }: AgGridReactBaseProps<TData>) => {
+export const AgGridReactBase = <TData,>({
+  theme,
+  ...props
+}: AgGridReactBaseProps<TData>) => {
   // 2. Парсер быстрого фильтра (вынесен в константу, чтобы не пересоздавать)
   const quickFilterParser = (searchValue: string) => {
     if (!searchValue) return [];
@@ -33,7 +41,6 @@ export const AgGridReactBase = <TData,>({ theme, ...props }: AgGridReactBaseProp
       // suppressRowHoverHighlight={true}
       suppressCellFocus={true} // Разрешить выделение ячейки
       enableCellTextSelection={true} // Разрешить выделение текста в ячейках
-
       // Прокидываем все остальные пропсы (rowData, columnDefs, events и т.д.)
       {...props}
     />
