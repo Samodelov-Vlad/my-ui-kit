@@ -4,9 +4,9 @@ import { forwardRef, type ComponentRef } from "react"; // <-- Добавили C
 export interface AntdSelectProps extends SelectProps {}
 
 // Извлекаем тип без использования префикса React.
-type SelectRef = ComponentRef<typeof Select>;
+// type SelectRef = ComponentRef<typeof Select>;
 
-export const AntdSelect = forwardRef<SelectRef, AntdSelectProps>(
+export const AntdSelect = forwardRef<any, AntdSelectProps>(
   ({ ...rest }, ref) => {
     return (
       <Select
