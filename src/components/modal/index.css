@@ -1,0 +1,35 @@
+.ant-modal-wrap {
+  pointer-events: none; /* Позволяет кликам проходить сквозь обёртку модала */
+}
+
+.ant-modal {
+  pointer-events: none; /* Но разрешает клики внутри самого модала */
+
+  .ant-modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .ant-modal-body {
+      flex-grow: 1;
+      overflow: auto;
+      /* overflow-y: auto;
+      overflow-x: hidden; */
+    }
+  }
+}
+
+/* Убираем прокрутку у самой обертки модалки Antd, 
+   чтобы она не появлялась при перетаскивании вниз */
+.no-scroll-wrapper {
+  overflow: hidden !important;
+}
+
+/* Настраиваем handle ресайза, чтобы он был точно в углу */
+/* .react-resizable-handle-se {
+  bottom: 5px !important;
+  right: 5px !important; */
+  /* background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAZUlEQVQokWNgGAWjYBSMAt6AEYSJiYmBkZGRSUpK6j9MExMTE7u0tPR/mCYmJiY2KSmp/zBNTExM7NLS0v9hmpiYmNisra3/wzQxMTGxS0tL/4dpYmJiYpOSkvofpomJiYmNnZ2dPwD5By8Pr96O9AAAAABJRU5ErkJggg==');
+  background-position: bottom right;
+  background-repeat: no-repeat; */
+/* } */

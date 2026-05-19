@@ -21,6 +21,7 @@ export default defineConfig({
         "react/jsx-runtime",
         "react/jsx-dev-runtime",
         "antd", // <-- Не даем плагину "подавиться" типами Ant Design
+        // Говорим Vite, чтобы он не вшивал AG Grid внутрь вашей библиотеки, а использовал ту копию, которая будет установлена в основном проекте (ведь мы уже перенесли AG Grid в peerDependencies).
         "ag-grid-community",
         "ag-grid-react",
         "ag-grid-enterprise",
