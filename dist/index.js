@@ -1,23 +1,23 @@
-import { Button as e, DatePicker as t, Input as n, Select as r } from "antd";
-import { forwardRef as i } from "react";
-import { jsx as a } from "react/jsx-runtime";
+import { Button as e, DatePicker as t, Input as n, InputNumber as r, Select as i } from "antd";
+import { forwardRef as a } from "react";
+import { jsx as o } from "react/jsx-runtime";
 //#region src/components/ui/button/index.tsx
-var o = i(({ ...t }, n) => /* @__PURE__ */ a(e, {
+var s = a(({ ...t }, n) => /* @__PURE__ */ o(e, {
 	ref: n,
 	...t
-})), s = i(({ ...e }, t) => /* @__PURE__ */ a(s, {
+})), c = a(({ ...e }, t) => /* @__PURE__ */ o(c, {
 	ref: t,
 	...e
-})), c = i(({ ...e }, t) => /* @__PURE__ */ a(r, {
+})), l = a(({ ...e }, t) => /* @__PURE__ */ o(i, {
 	ref: t,
 	showSearch: !0,
 	optionFilterProp: "label",
 	allowClear: !0,
 	...e
-})), l = i(({ ...e }, t) => /* @__PURE__ */ a(n.TextArea, {
+})), u = a(({ ...e }, t) => /* @__PURE__ */ o(n.TextArea, {
 	ref: t,
 	...e
-})), u = i(({ format: e, ...n }, r) => /* @__PURE__ */ a(t, {
+})), d = a(({ format: e, ...n }, r) => /* @__PURE__ */ o(t, {
 	ref: r,
 	allowClear: !0,
 	showNow: !0,
@@ -26,6 +26,11 @@ var o = i(({ ...t }, n) => /* @__PURE__ */ a(e, {
 		type: "mask"
 	},
 	...n
+})), f = a(({ isPretty: e = !0, ...t }, n) => /* @__PURE__ */ o(r, {
+	ref: n,
+	decimalSeparator: ",",
+	...e && { formatter: (e) => String(e).replace(".", ",").replace(/\B(?=(\d{3})+(?!\d{1,2}))/g, " ") },
+	...t
 }));
 //#endregion
-export { o as Button, u as DatePicker, s as Input, c as Select, l as TextArea };
+export { s as Button, d as DatePicker, c as Input, f as InputNumber, l as Select, u as TextArea };
