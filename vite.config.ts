@@ -7,6 +7,11 @@ import { resolve } from "path";
 export default defineConfig({
   plugins: [react()],
   build: {
+    // ЭТА НАСТРОЙКА ПРАВИТ ОШИБКУ DYNAMIC REQUIRE
+    commonjsOptions: {
+      include: [/react-draggable/, /react-resizable/, /node_modules/],
+      transformMixedEsModules: true,
+    },
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       name: "MyUiKit",
