@@ -1,1 +1,0 @@
-{"version":3,"file":"use-modal-store-settings.d.ts","sourceRoot":"","sources":["../../../src/components/modal/use-modal-store-settings.ts"],"names":[],"mappings":"AAEA,UAAU,QAAQ;IAChB,YAAY,EAAE,CAAC,MAAM,EAAE,MAAM,KAAK,IAAI,CAAC;CACxC;AAED,UAAU,aAAa;IACrB,SAAS,EAAE,MAAM,CAAC;CACnB;AAED,UAAU,MAAO,SAAQ,aAAa,EAAE,QAAQ;CAAG;AAWnD,eAAO,MAAM,qBAAqB,qEAAqC,CAAC"}
