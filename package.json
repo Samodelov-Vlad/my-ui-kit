@@ -55,10 +55,5 @@
     "typescript": "^6.0.2",
     "vite": "^8.0.3",
     "vitest": "^4.1.2"
-  },
-  "dependencies": {
-    "ag-grid-community": "35.2",
-    "ag-grid-enterprise": "file:src/assets/third-party-libs/ag-grid-enterprise/ag-grid-enterprise-v.35.2.tgz",
-    "ag-grid-react": "35.2"
   }
 }
