@@ -6,7 +6,7 @@ export interface AntdSelectProps extends SelectProps {}
 
 type SelectRef = React.ComponentRef<typeof Select>;
 
-export const AntdSelect = forwardRef<SelectRef, SelectProps>(
+export const AntdSelect = forwardRef<SelectRef, AntdSelectProps>(
   ({ ...rest }, ref) => {
     return (
       <Select
