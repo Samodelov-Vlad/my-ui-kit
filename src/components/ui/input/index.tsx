@@ -5,5 +5,5 @@ import { forwardRef } from "react";
 export interface InputProps extends AntdInputProps {}
 
 export const Input = forwardRef<InputRef, InputProps>(({ ...rest }, ref) => {
-  return <Input ref={ref} {...rest} />;
+  return <AntdInput ref={ref} {...rest} />;
 });
