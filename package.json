@@ -1,6 +1,6 @@
 {
   "name": "my-ui-kit",
-  "version": "1.0.28",
+  "version": "1.0.30",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -32,7 +32,6 @@
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0",
     "ag-grid-community": "35.2",
-    "ag-grid-enterprise": "file:src/assets/third-party-libs/ag-grid-enterprise/ag-grid-enterprise-v.35.2.tgz",
     "ag-grid-react": "35.2"
   },
   "devDependencies": {
