@@ -5,7 +5,7 @@ import { forwardRef } from 'react';
 
 export interface TextAreaProps extends AntdTextAreaProps {}
 
-export const TextArea = forwardRef<TextAreaRef, TextAreaProps>(({ ...rest }, ref) => {
+export const AntdTextArea = forwardRef<TextAreaRef, TextAreaProps>(({ ...rest }, ref) => {
   return (
     <AntdInput.TextArea
       ref={ref}

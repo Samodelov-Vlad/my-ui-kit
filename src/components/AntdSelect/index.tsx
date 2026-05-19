@@ -15,6 +15,7 @@ export const AntdSelect = forwardRef<any, AntdSelectProps>(
         showSearch
         optionFilterProp="label"
         allowClear
+        getPopupContainer={(triggerNode) => triggerNode.parentNode}
         {...rest}
       />
     );
