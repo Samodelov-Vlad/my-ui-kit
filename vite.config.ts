@@ -1,40 +1,35 @@
-/// <reference types="vitest/config" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
-import dts from "vite-plugin-dts";
 import { resolve } from "path";
 
-// vite.config.ts
 export default defineConfig({
-  plugins: [
-    react(),
-  ],
+  plugins: [react()],
   build: {
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
-      name: "MyUiKit",
-      fileName: "index",
-      formats: ["es"],
+      formats: ["es"], // Оставляем только современный ES-формат
     },
     rollupOptions: {
-      // КРИТИЧНО: Добавляем jsx-runtime в external
       external: [
         "react",
         "react-dom",
         "react/jsx-runtime",
         "react/jsx-dev-runtime",
-        "antd", // <-- Не даем плагину "подавиться" типами Ant Design
+        "antd",
       ],
       output: {
+        // КРИТИЧНО: Разделяем компоненты по отдельным файлам, предотвращая JS-циклы
+        preserveModules: true, 
+        preserveModulesRoot: "src",
+        entryFileNames: "[name].js",
+        exports: "named",
+        // Указываем Rollup точные глобальные переменные
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
-          // "react/jsx-runtime": "jsxRuntime", // На всякий случай для UMD, если добавишь // раскоментить если сломалась сборка
+          antd: "antd"
         },
-        exports: "named",
       },
     },
-    // Убираем commonjsOptions: { include: [] }, если оно не помогает.
-    // Лучше вернуть стандартное поведение или вообще не трогать.
   },
 });
