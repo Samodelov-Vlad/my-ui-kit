@@ -1,6 +1,6 @@
 {
   "name": "my-ui-kit",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -11,7 +11,7 @@
       "types": "./dist/index.d.ts"
     },
     "./components/*": {
-      "types": "./dist/components/*/index.d.ts"
+      "types": "./dist/components/ui/*/index.d.ts"
     }
   },
   "files": [
