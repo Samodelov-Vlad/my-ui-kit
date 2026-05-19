@@ -9,7 +9,7 @@ import { AG_GRID_LOCALE_RU } from "./ag-grid-locale.ru";
 // Регистрируем модули один раз здесь
 // ModuleRegistry.registerModules([AllEnterpriseModule]);
 
-// ModuleRegistry.registerModules([AllCommunityModule]);
+ModuleRegistry.registerModules([AllCommunityModule]);
 
 // Типизируем пропсы: наследуем все стандартные пропсы AG Grid
 interface AgGridReactBaseProps<TData = any> extends AgGridReactProps<TData> {}
