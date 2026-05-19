@@ -19,12 +19,13 @@
     "outDir": "dist",
     "rootDir": "src"
   },
-  "include": ["src"],
+  "include": ["src", "node_modules/ag-grid-react"],
   "exclude": [
     "node_modules",
     "dist",
     "src/**/*.stories.tsx",
     "src/**/*.stories.ts",
-    "src/stories" // <-- ДОБАВЬТЕ ЭТУ СТРОЧКУ
+    "src/stories"
+    // "node_modules/ag-grid-react",
   ]
 }

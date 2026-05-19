@@ -1,6 +1,6 @@
 {
   "name": "my-ui-kit",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -11,7 +11,7 @@
       "types": "./dist/index.d.ts"
     },
     "./components/*": {
-      "types": "./dist/components/ui/*/index.d.ts"
+      "types": "./dist/components/*/index.d.ts"
     }
   },
   "files": [
@@ -30,7 +30,10 @@
   "peerDependencies": {
     "antd": "^5.29.3",
     "react": ">=18.0.0",
-    "react-dom": ">=18.0.0"
+    "react-dom": ">=18.0.0",
+    "ag-grid-community": "35.2",
+    "ag-grid-enterprise": "file:src/assets/third-party-libs/ag-grid-enterprise/ag-grid-enterprise-v.35.2.tgz",
+    "ag-grid-react": "35.2"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^5.1.1",
@@ -52,5 +55,10 @@
     "typescript": "^6.0.2",
     "vite": "^8.0.3",
     "vitest": "^4.1.2"
+  },
+  "dependencies": {
+    "ag-grid-community": "35.2",
+    "ag-grid-enterprise": "file:src/assets/third-party-libs/ag-grid-enterprise/ag-grid-enterprise-v.35.2.tgz",
+    "ag-grid-react": "35.2"
   }
 }
